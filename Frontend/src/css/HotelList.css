@@ -1,0 +1,345 @@
+.hotel-list-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.list-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.list-header p {
+  margin-top: 7px;
+  margin-bottom: 0;
+
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.hotel-count {
+  background: #eff6ff;
+  color: #2563eb;
+
+  padding: 10px 18px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.filter-section {
+  width: 100%;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 18px;
+
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 1;
+
+  min-width: 280px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #6b7280;
+}
+
+.search-box:focus-within {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 14px;
+
+  color: #111827;
+}
+
+.search-box input::placeholder {
+  color: #9ca3af;
+}
+
+
+.price-filter {
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: white;
+
+  color: #6b7280;
+}
+
+.price-filter input {
+  width: 110px;
+  height: 34px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+
+  padding: 0 9px;
+
+  outline: none;
+
+  font-size: 13px;
+}
+
+.price-filter input:focus {
+  border-color: #2563eb;
+}
+
+.price-filter span {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.clear-filter-btn {
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 16px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.clear-filter-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.hotel-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+
+  width: 100%;
+}
+
+.no-hotels {
+  width: 100%;
+
+  min-height: 300px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px;
+}
+
+.no-hotels h2 {
+  margin: 0 0 8px;
+
+  font-size: 23px;
+
+  color: #374151;
+}
+
+.no-hotels p {
+  margin: 0 0 20px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.no-hotels button {
+  border: none;
+
+  background: #2563eb;
+
+  color: white;
+
+  padding: 11px 20px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.no-hotels button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 1100px) {
+
+  .hotel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .list-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .list-header h1 {
+    font-size: 26px;
+  }
+
+  .filter-section {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .price-filter {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .price-filter input {
+    flex: 1;
+
+    width: auto;
+  }
+
+  .clear-filter-btn {
+    width: 100%;
+  }
+
+  .hotel-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .list-header h1 {
+    font-size: 23px;
+  }
+
+  .hotel-count {
+    font-size: 13px;
+
+    padding: 8px 14px;
+  }
+
+  .filter-section {
+    padding: 14px;
+  }
+
+  .price-filter {
+    gap: 5px;
+    padding: 0 8px;
+  }
+
+  .price-filter input {
+    min-width: 0;
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+

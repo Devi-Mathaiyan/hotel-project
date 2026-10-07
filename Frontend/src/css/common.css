@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-content {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 30px 50px;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.primary-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.secondary-btn {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.secondary-btn:hover {
+  background: #f3f4f6;
+}
+
+.danger-btn {
+  border: none;
+  background: #dc2626;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.danger-btn:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 25px;
+  }
+}
+
+
+
+/* =========================================
+   SEARCH + PRICE FILTER
+========================================= */
+
+.search-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0 25px;
+  box-sizing: border-box;
+}
+
+.search-section input[type="text"] {
+  flex: 2;
+  height: 46px;
+
+  padding: 0 16px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+
+.search-section input[type="number"] {
+  flex: 1;
+  height: 46px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  box-sizing: border-box;
+
+  transition: 0.2s ease;
+}
+
+.search-section input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+.search-section input::placeholder {
+  color: #9ca3af;
+}
+
+
+
+.search-section input:hover {
+  border-color: #9ca3af;
+}
+
+
+@media (max-width: 700px) {
+
+  .search-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-section input[type="text"],
+  .search-section input[type="number"] {
+    width: 100%;
+    flex: none;
+  }
+
+}
